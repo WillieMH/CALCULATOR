@@ -7,16 +7,27 @@
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(4, 80px);
-  grid-template-rows: minmax(80px, auto) repeat(5,80px);
+  grid-template-rows: minmax(80px, auto) repeat(4,80px);
   height: 100vh;
+  gap: 10px;
 }
 
+// change this on final calculator
 .output {
   grid-column: span 4;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  font-size: 2rem;
 }
 
 button {
   border: 1px solid black;
   border-radius: 50%;
+  font-size: 2rem;
+}
+
+button:hover {
+  background-color: aliceblue;
 }
