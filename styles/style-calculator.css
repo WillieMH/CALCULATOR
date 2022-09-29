@@ -1,0 +1,22 @@
+*, **::before, *::after {
+  box-sizing: border-box;
+}
+
+.calculatorContainer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(80px, auto) repeat(5, 80px);
+  height: 100vh;
+}
+
+.output {
+  grid-column: span 4;
+  border: 1px solid black;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 50%;
+}/*# sourceMappingURL=style-calculator.css.map */
