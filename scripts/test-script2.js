@@ -19,7 +19,7 @@ console.log(displayArry);
 
 const numPress = (event) => {
   displayArry.push(event.value);
-  const modifier = displayArry.toString();
+  const modifier = displayArry.toString(); //remove this step, it still goes in as a sting, convert to number during equalPress func
   const workingNumber = modifier.replaceAll("," , "");
   calculator.displayValue = workingNumber;
   calcDisplay.innerHTML = workingNumber;
@@ -31,8 +31,12 @@ const opPress =  (event) => {
   calculator.displayValue = 0;
   calculator.operator = event.value;
   calcDisplay.innerHTML = event.value;
+  displayArry.length = 0;
 }
 
+// const equalPress func here.
+
+// need to add a clear all button to calc.
 const clearAll = (event) => {
   calcDisplay.innerHTML = "0";
   displayArry.length = 0;
