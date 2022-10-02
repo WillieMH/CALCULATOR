@@ -1,5 +1,5 @@
 const calculator = {
-  displayValue: '0',
+  displayValue: 0,
   firstOperand: null,
   waitingForSecondOperand: false,
   operator: null,
@@ -34,7 +34,13 @@ const opPress =  (event) => {
   displayArry.length = 0;
 }
 
-// const equalPress func here.
+const equalPress = () => { //need if statements to carry out proper calculation
+  resultSum = Number(calculator.displayValue) + Number(calculator.firstOperand);
+  console.log(resultSum);
+  calculator.displayValue = resultSum;
+  calcDisplay.innerHTML = calculator.displayValue;
+
+}
 
 // need to add a clear all button to calc.
 const clearAll = (event) => {
@@ -42,3 +48,17 @@ const clearAll = (event) => {
   displayArry.length = 0;
 }
 
+
+
+/*  REFERENCES
+    ==========
+  - Number(string); https://www.freecodecamp.org/news/how-to-convert-a-string-to-a-number-in-javascript/
+  - onlclick"(this)" method - https://www.w3schools.com/jsref/event_onclick.asp
+ */
+
+/*  NOTES:
+    ======
+  + Capitalisation can be important, in equalPress, number(string); is very different to
+    Number(string);
+  + 
+*/
