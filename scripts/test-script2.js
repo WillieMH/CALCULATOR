@@ -1,16 +1,40 @@
-// const a = ['1','2','3']
+const calculator = {
+  displayValue: '0',
+  firstOperand: null,
+  waitingForSecondOperand: false,
+  operator: null,
+};
 
-// let text = a.toString();
+console.log(calculator);
 
-// let newtext = text.replaceAll("," , "");
+const calcDisplay = document.querySelector(".output");
 
-// console.log (newtext);
+const displayArry = [];
+// const modifier = displayArry.toString();
+// const workingNumber = modifier.replaceAll("," , "");
+// calcDisplay.innerHTML = workingNumber;
 
-const displayArry = [7, 2, 4];
-const modifier = displayArry.toString();
-const displayActual = modifier.replaceAll("," , "");
 
-// const displayActual = "Bugger"
+console.log(displayArry);
 
-console.log(modifier);
-console.log(displayActual);
+const numPress = (event) => {
+  displayArry.push(event.value);
+  const modifier = displayArry.toString();
+  const workingNumber = modifier.replaceAll("," , "");
+  calculator.displayValue = workingNumber;
+  calcDisplay.innerHTML = workingNumber;
+}
+
+const opPress =  (event) => {
+  console.log(event.value);
+  calculator.firstOperand = calculator.displayValue;
+  calculator.displayValue = 0;
+  calculator.operator = event.value;
+  calcDisplay.innerHTML = event.value;
+}
+
+const clearAll = (event) => {
+  calcDisplay.innerHTML = "0";
+  displayArry.length = 0;
+}
+

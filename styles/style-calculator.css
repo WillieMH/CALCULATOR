@@ -7,7 +7,7 @@
   justify-content: center;
   align-content: center;
   grid-template-columns: repeat(4, 80px);
-  grid-template-rows: minmax(80px, auto) repeat(4, 80px);
+  grid-template-rows: minmax(80px, auto) repeat(5, 80px);
   height: 100vh;
   gap: 10px;
 }
@@ -16,8 +16,17 @@
   grid-column: span 4;
   border: 1px solid black;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 30px;
+}
+
+.prevNumber {
+  color: grey;
+  font-size: 1.5rem;
+}
+
+.workingNumber {
   font-size: 2rem;
 }
 
@@ -29,4 +38,9 @@ button {
 
 button:hover {
   background-color: aliceblue;
+}
+
+.clearAll {
+  grid-column: span 4;
+  border-radius: 10px;
 }/*# sourceMappingURL=style-calculator.css.map */
