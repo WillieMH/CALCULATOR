@@ -35,11 +35,22 @@ const opPress =  (event) => {
 }
 
 const equalPress = () => { //need if statements to carry out proper calculation
-  resultSum = Number(calculator.displayValue) + Number(calculator.firstOperand);
+  if (calculator.operator === "+") {resultSum = Number(calculator.firstOperand) + Number(calculator.displayValue);
   console.log(resultSum);
   calculator.displayValue = resultSum;
   calcDisplay.innerHTML = calculator.displayValue;
-
+} else if (calculator.operator === "*") {resultSum = Number(calculator.firstOperand) * Number(calculator.displayValue);
+  console.log(resultSum);
+  calculator.displayValue = resultSum;
+  calcDisplay.innerHTML = calculator.displayValue;
+} else if (calculator.operator === "/") {resultSum = Number(calculator.firstOperand) / Number(calculator.displayValue);
+  console.log(resultSum);
+  calculator.displayValue = resultSum;
+  calcDisplay.innerHTML = calculator.displayValue;
+} else if (calculator.operator === "-") {resultSum = Number(calculator.firstOperand) - Number(calculator.displayValue);
+console.log(resultSum);
+calculator.displayValue = resultSum;
+calcDisplay.innerHTML = calculator.displayValue;}
 }
 
 // need to add a clear all button to calc.
