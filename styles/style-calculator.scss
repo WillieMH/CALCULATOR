@@ -1,7 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url(./resources/Digital7-1e1Z.ttf);
 
 * {
   box-sizing: border-box;
+}
+
+body{
+  background-image: url("/resources/building-supermarket-shelves-business-blur.jpg");
+  background-size: 2000px auto;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98vh;
 }
 
 .calculatorContainer {
@@ -10,12 +21,13 @@
   align-content: center;
   grid-template-columns: repeat(4, 80px);
   grid-template-rows: minmax(80px, auto) repeat(5,80px);
-  height: 600px;
+  height: 700px;
+  width: 600px;
   gap: 10px;
   border: 1px solid black;
-  width: 500px;
-  margin-left: auto;
-  margin-top: auto;
+  background: rgb(2,0,36);
+  background: linear-gradient(128deg, rgba(2,0,36,1) 0%, rgba(76,9,121,1) 61%, rgb(246, 243, 243) 100%);
+  border-radius: 10% 10% 45% 45%;
 }
 
 // change this on final calculator
@@ -30,6 +42,7 @@
   font-family: "Teko", sans-serif;
   font-size: 3rem;
   color: aliceblue;
+  border-radius: 5px;
 }
 
 .prevNumber {
