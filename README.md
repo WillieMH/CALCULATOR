@@ -11,4 +11,5 @@ Calculator flaws to be addressed;
   - Needs word/text wrap/break on output display to prevent going off calc.
   - Needs clear last as well as clear all
   - % button to be added
+  - When delete has removed the full number, put something in the display
 

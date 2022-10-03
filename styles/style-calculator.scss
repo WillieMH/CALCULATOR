@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
-// @import url(./resources/Digital7-1e1Z.ttf);
+
+@font-face {
+  font-family:"CalcDigis";
+  src: url("/resources/Digital7-1e1Z.ttf") format("truetype");
+}
 
 * {
   box-sizing: border-box;
@@ -9,6 +13,7 @@ body{
   background-image: url("/resources/building-supermarket-shelves-business-blur.jpg");
   background-size: 2000px auto;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,11 +43,12 @@ body{
   display: flex;
   // flex-direction: column;
   justify-content: flex-end;
-  padding: 30px;
-  font-family: "Teko", sans-serif;
+  padding: 15px;
+  font-family: "CalcDigis", sans-serif;
   font-size: 3rem;
   color: aliceblue;
   border-radius: 5px;
+  box-shadow: inset 5px 5px 8px rgba(252, 252, 35, 0.6);
 }
 
 .prevNumber {
@@ -69,6 +75,10 @@ button:hover {
 }
 
 .backSpace {
-  grid-column: span 2;
   border-radius: 10px;
+}
+
+.equalButton {
+  grid-column: span 2;
+  border-radius: 10px 10px 45% 10px;
 }
