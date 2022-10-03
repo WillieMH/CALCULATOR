@@ -15,6 +15,7 @@ const displayArry = [];
 // calcDisplay.innerHTML = workingNumber;
 console.log(displayArry);
 
+// Adding numbers from number keypresses inc .
 const numPress = (event) => {
   displayArry.push(event.value);
   const modifier = displayArry.toString(); //remove this step, it still goes in as a string, convert to number during equalPress func
@@ -23,6 +24,7 @@ const numPress = (event) => {
   calcDisplay.innerHTML = workingNumber;
 }
 
+// Operation button press
 const opPress =  (event) => {
   console.log(event.value);
   calculator.storedNumber = calculator.displayValue;
@@ -32,6 +34,7 @@ const opPress =  (event) => {
   displayArry.length = 0;
 }
 
+// Equal button press
 const equalPress = () => { //need if statements to carry out proper calculation // needs an "if" for binary add 0.1 + 0.2
   if (calculator.operator === "+") {resultSum = Number(calculator.storedNumber) + Number(calculator.displayValue);
   console.log(resultSum);
@@ -51,7 +54,7 @@ calculator.displayValue = resultSum;
 calcDisplay.innerHTML = calculator.displayValue;}
 }
 
-// need to add a clear all button to calc.
+// All clear button
 const clearAll = () => {
   calculator.displayValue = 0;
   calculator.storedNumber = null;
@@ -61,6 +64,7 @@ const clearAll = () => {
   calcDisplay.innerHTML = calculator.displayValue;
 }
 
+// Backspace button
 const backSpace = () => {
   displayArry.pop();
   const modifier = displayArry.toString(); //remove this step, it still goes in as a string, convert to number during equalPress func
@@ -69,8 +73,21 @@ const backSpace = () => {
   calcDisplay.innerHTML = workingNumber;
 }
 
+// +/- button
 const negatiseNumber = () => {
-  
+  if (displayArry[0] === "-") {
+    displayArry.shift();
+    const modifier = displayArry.toString(); //remove this step, it still goes in as a string, convert to number during equalPress func
+    const workingNumber = modifier.replaceAll("," , "");
+    calculator.displayValue = workingNumber;
+    calcDisplay.innerHTML = workingNumber;
+  } else {
+    displayArry.unshift("-");
+    const modifier = displayArry.toString(); //remove this step, it still goes in as a string, convert to number during equalPress func
+    const workingNumber = modifier.replaceAll("," , "");
+    calculator.displayValue = workingNumber;
+    calcDisplay.innerHTML = workingNumber;
+  }
 }
 
 /*  REFERENCES
