@@ -54,9 +54,17 @@ calcDisplay.innerHTML = calculator.displayValue;}
 }
 
 // need to add a clear all button to calc.
-const clearAll = (event) => {
-  calcDisplay.innerHTML = "0";
+const clearAll = () => {
+  calculator.displayValue = 0;
+  calculator.firstOperand = null;
+  calculator.waitingForSecondOperand = false;
+  calculator.operator = null;
   displayArry.length = 0;
+  calcDisplay.innerHTML = calculator.displayValue;
+}
+
+const backSpace = () => {
+
 }
 
 

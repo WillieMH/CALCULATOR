@@ -42,6 +42,11 @@ button:hover {
 }
 
 .clearAll {
-  grid-column: span 4;
+  grid-column: span 2;
+  border-radius: 10px;
+}
+
+.backSpace {
+  grid-column: span 2;
   border-radius: 10px;
 }
