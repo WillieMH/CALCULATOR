@@ -2,7 +2,7 @@
 
 @font-face {
   font-family:"CalcDigis";
-  src: url("/resources/Digital7-1e1Z.ttf") format("truetype");
+  src: url("../resources/Digital7-1e1Z.ttf") format("truetype");
 }
 
 * {
@@ -62,13 +62,16 @@ body{
 }
 
 button {
-  border: 1px solid black;
+  border: 2px solid grey;
+  background-color: black;
+  color: white;
   border-radius: 50%;
   font-size: 2rem;
 }
 
 button:hover {
   background-color: aliceblue;
+  color: black;
 }
 
 .clearAll {
