@@ -1,7 +1,6 @@
 const calculator = {
   displayValue: 0,
   storedNumber: null,
-  waitingForSecondOperand: false,
   operator: null,
 };
 
