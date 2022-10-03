@@ -20,5 +20,5 @@ Design issues to resolve;
   - Change effect on press
   - Add on/off button with sound.......possible animation?!?
   - Change bot.right radius of "=" key to match bot.right radius of calc-container
-  - 
+  - Add audio to button presses
 
